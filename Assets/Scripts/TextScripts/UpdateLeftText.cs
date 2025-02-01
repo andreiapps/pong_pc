@@ -12,6 +12,7 @@ public class UpdateLeftText : MonoBehaviour
     // Update is called once per frame
     void Update()
     {
+		// Just update the score, nothing else
         score = ballScript.leftScore;
         GetComponent<Text>().text = score.ToString();
     }

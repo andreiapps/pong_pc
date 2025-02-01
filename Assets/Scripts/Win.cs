@@ -13,6 +13,7 @@ public class Win : MonoBehaviour
 
     private void Update()
     {
+		// Get score and check who won(this script only applies to player vs player mode, WinAI.cs applies to AI vs player mode)
         int leftScore = int.Parse(GameObject.Find("LeftScore").GetComponent<Text>().text);
         int rightScore = int.Parse(GameObject.Find("RightScore").GetComponent<Text>().text);
         if (leftScore == 9 || rightScore == 9)

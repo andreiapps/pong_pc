@@ -11,6 +11,7 @@ public class PauseMenu : MonoBehaviour
     public Vector2 prevVelocity;
     public void ToggleMenu(GameObject menu)
     {
+		// Toggle the menu and save the velocity for when the game resumes
         isMenuOpened = menu.activeSelf;
         menu.SetActive(!isMenuOpened);
         if (!isMenuOpened)

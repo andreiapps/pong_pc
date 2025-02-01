@@ -10,6 +10,7 @@ public class RightPaddle : MonoBehaviour
 
     void FixedUpdate()
     {
+		// Move paddle according to pressed key and make sure it doesn't get out of screen
         if (Input.GetKey(KeyCode.UpArrow))
         {
             if (transform.position.y < yBound)

@@ -11,11 +11,13 @@ public class LeftPaddleAuto : MonoBehaviour
 
     void Start()
     {
+		// Find the ball
         ball = GameObject.Find("Ball");
     }
 
     void FixedUpdate()
     {
+		// If the ball is in the AI's half, follow the same Y axis as the ball(very bad algorithm and impossible for human to win, but I DON'T CARE)
         if (ball.transform.position.x < 1.52)
         {
             if (transform.position.y < ball.transform.position.y)
@@ -36,6 +38,7 @@ public class LeftPaddleAuto : MonoBehaviour
     }
     private void OnTriggerEnter2D(Collider2D collision)
     {
+		// I forgot what this does
         if (collision.gameObject.CompareTag("Paddle"))
         {
             if (GetComponent<Rigidbody2D>().velocity.x == 0)
